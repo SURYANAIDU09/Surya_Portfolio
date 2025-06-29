@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <link rel="icon" type="image/x-icon" href="./images.jpg"> 
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .open-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .close-btn {
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .section {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 20px;
+  }
+  
+  ul li {
+    margin: 5px 0;
+  }
+  </style>
+  
+<body>
+    <section>
+    <h1> Welcome to My Portfolio </h1>
+    <h2>Surya Prakasha C G </h2>
+    <img src="./1724772179334 - Copy.jpg" alt="image" width="20%">
+    </section>
+
+  <div class="container">
+
+    <!-- About Section -->
+    
+    <button class="open-btn" onclick="toggleSection('about')"> About</button>
+    <div id="about" class="section">
+      <button class="close-btn" onclick="toggleSection('about')">Close</button>
+      <h2>About Me</h2>
+      <p>Hello! I'm a web developer passionate about building user-friendly websites and applications. I have experience in HTML, CSS, JavaScript, and various frameworks.</p>
+    </div>
+
+    <!-- Skills Section -->
+    <button class="open-btn" onclick="toggleSection('skills')">Skills</button>
+    <div id="skills" class="section">
+      <button class="close-btn" onclick="toggleSection('skills')">Close</button>
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+      </ul>
+    </div>
+
+    <!-- Projects Section -->
+    <button class="open-btn" onclick="toggleSection('projects')">Projects</button>
+    <div id="projects" class="section">
+      <button class="close-btn" onclick="toggleSection('projects')">Close</button>
+      <h2>Projects</h2>
+      <p>I've worked on several web development projects, including e-commerce websites, blogs, and interactive web applications. Check out my GitHub for more.</p>
+    </div>
+
+    <!-- Contact Section -->
+    <button class="open-btn" onclick="toggleSection('contact')">Open Contact</button>
+    <div id="contact" class="section">
+      <button class="close-btn" onclick="toggleSection('contact')">Close</button>
+      <h2>Contact</h2>
+      <p>Feel free to reach out to me via email at myemail@example.com or connect with me on LinkedIn.</p>
+    </div>
+  </div>
+  <script>
+  function toggleSection(section) {
+    const sectionElement = document.getElementById(section);
+    
+    if (sectionElement.style.display === "block") {
+      sectionElement.style.display = "none";
+    } else {
+      sectionElement.style.display = "block";
+    }
+  }
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>

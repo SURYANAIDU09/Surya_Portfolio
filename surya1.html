@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        .about-btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .about-btn:hover {
+            background-color: #45a049;
+        }
+        
+        .about-details {
+            display: none;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            width: 300px;
+            text-align: left;
+        }
+        
+        .close-btn {
+            margin-top: 15px;
+            padding: 8px 16px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .close-btn:hover {
+            background-color: #e53935;
+        }
+        
+    </style>
+
+    <div class="container">
+        <button id="aboutBtn" class="about-btn">About Me</button>
+
+        <div id="aboutDetails" class="about-details">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm a passionate web developer with a love for creating beautiful and functional websites.
+                I have experience with HTML, CSS, JavaScript, and various frameworks and libraries. I'm always learning and
+                excited to take on new challenges.
+            </p>
+            <button id="closeBtn" class="close-btn">Close</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('aboutBtn').addEventListener('click', function() {
+    document.getElementById('aboutDetails').style.display = 'block';
+});
+
+document.getElementById('closeBtn').addEventListener('click', function() {
+    document.getElementById('aboutDetails').style.display = 'none';
+});
+
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="./images.jpg"> 
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .open-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .close-btn {
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .section {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 20px;
+  }
+  
+  ul li {
+    margin: 5px 0;
+  }
+
+  .profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+    </style>
+    <div class="container">
+        <!-- About Section -->
+        <button class="open-btn" onclick="toggleSection('about')"> About</button>
+        <div id="about" class="section">
+          <button class="close-btn" onclick="toggleSection('about')">Close</button>
+          <h2>About Me</h2>
+          <div class="about-content">
+            <img src="./1724772179334 - Copy.jpg" alt="Profile Picture" class="profile-img">
+            <p>Hi,I'm Surya Prakasha C G and I'm currently persuing my BE final year in Electronics & Communication Engineering at <em>"Channabasaveshwara Institute of Technology"</em>,Gubbi and I am deeply passionate about technology and it's transformative power to solve real-world problems, constantly driven to explore, innovate, and push the boundaries of what's possible.</p>
+          </div>
+        </div>
+    
+    
+        <!-- Skills Section -->
+
+        <button class="open-btn" onclick="toggleSection('skills')">Skills</button>
+        <div id="skills" class="section">
+          <button class="close-btn" onclick="toggleSection('skills')">Close</button>
+          <h2>Skills</h2>
+          <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </div>
+    
+        <!-- Projects Section -->
+
+        <button class="open-btn" onclick="toggleSection('projects')">Projects</button>
+        <div id="projects" class="section">
+          <button class="close-btn" onclick="toggleSection('projects')">Close</button>
+          <h2>Projects</h2>
+          <p>I've worked on several web development projects, including e-commerce websites, blogs, and interactive web applications. Check out my GitHub for more.</p>
+        </div>
+    
+        <!-- Contact Section -->
+
+        <button class="open-btn" onclick="toggleSection('contact')"> Contact </button>
+        <div id="contact" class="section">
+          <button class="close-btn" onclick="toggleSection('contact')">Close</button>
+          <h2>Contact</h2>
+          <p>Feel free to reach out to me via email at myemail@example.com or connect with me on LinkedIn.</p>
+        </div>
+    </main>
+        <li>
+    <script>
+        function toggleSection(section) {
+          const sectionElement = document.getElementById(section);
+          
+          if (sectionElement.style.display === "block") {
+            sectionElement.style.display = "none";
+          } else {
+            sectionElement.style.display = "block";
+          }
+        }
+    </script>
+      
+    <script src="script.js"></script>
+    
+    
+</body>
+</html>
